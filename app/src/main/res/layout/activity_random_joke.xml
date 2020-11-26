@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_joke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_joke_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_joke_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <ImageView
+        android:id="@+id/image_joke_logo"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:padding="10dp"
+        android:src="@drawable/chuck_logo"
+        app:layout_constraintEnd_toStartOf="@id/guideline_joke_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_joke_left"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_joke" />
+
+
+    <TextView
+        android:id="@+id/text_joke_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="inherit"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_joke_right"
+        app:layout_constraintStart_toEndOf="@+id/guideline_joke_left"
+        app:layout_constraintTop_toBottomOf="@+id/image_joke_logo"
+        tools:text="Time waits for no man. Unless that man is Chuck Norris." />
+
+    <ImageView
+        android:id="@+id/image_joke_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:adjustViewBounds="false"
+        app:layout_constraintEnd_toStartOf="@+id/text_joke_content"
+        app:layout_constraintTop_toBottomOf="@+id/image_joke_logo" />
+
+    <TextView
+        android:id="@+id/text_joke_link_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Joke Link:"
+        app:layout_constraintEnd_toStartOf="@id/guideline_joke_right"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/guideline_joke_left"
+        app:layout_constraintTop_toBottomOf="@+id/text_joke_content" />
+
+    <TextView
+        android:id="@+id/text_joke_link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_joke_right"
+        app:layout_constraintStart_toEndOf="@+id/guideline_joke_left"
+        app:layout_constraintTop_toBottomOf="@+id/text_joke_link_label"
+        tools:text="https://api.chucknorris.io/jokes/q7x2yb1tspujmkwwdyqrsw" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_jokes_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="image_joke_icon,text_joke_content,text_joke_link,text_joke_link_label" />
+
+    <ProgressBar
+        android:id="@+id/progress_jokes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

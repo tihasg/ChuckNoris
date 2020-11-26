@@ -1,2 +1,6 @@
 # ChuckNoris
-Você não tem que ser o mestre dos designers, MAS queremos devs que também saibam opinar e conversar com os nossos mestres designers. Então, faça seu melhor quando for escrever os layouts ;)  O APP DEVE CONTER: Uma tela de lista de categorias Uma tela que vai mostrar uma piada aleatória da categoria clicada na tela anterior (basicão: lista->detalhe ;)) Tecnicamente, o que queremos que você use: Kotlin (já falamos sobre isso, bebê) Injeção de dependência com Dagger2 ou Koin (Koin ganha mais pontos) Courotines ou RXJava2 (E vamos ficar super empolgados e curiosos em entender o motivo da sua escolha aqui) AndroidX Clean Architecture (MVP) ou MVVM Como você será avaliado: Organização do código Testes unitários Uso de SOLID Siga a guideline do Material Gostaríamos de entender como você trabalha, então, queremos olhar sua evolução pelos seus commits ;) Se tiver muito fácil e você quiser fazer um pouco mais: Na tela de detalhes da piada, crie um jeito de ver as próximas piadas da mesma categoria, sem sair da tela (ex: swipe, botão de ir e voltar e etc) Crie um jeito de favoritar as piadas e uma tela para ver as favoritas na sessão Offline first! Faça a persistência dos dados. Uma tela de abertura com uma imagem do Chuck  IMPORTANTE: Faça um fork e assim que começar abra um PR com o nome "WIP - $projectName" para acompanharmos. IMPORTANTE2: Qualquer dúvida, sugestão ou problema, abra uma issue que a gente responde.  O teste é esse. Viu? Nem doeu.
+MVP RETROFIT ANDROID KOTLIN
+
+<p align="center">
+<img src="/telas/Telas.png"/>
+</p>
